@@ -1,28 +1,138 @@
-# TaskWeave
+# NoditAuto - Blockchain Automation Platform
 
-This project is a visually intuitive front-end prototype of an automation platform, similar to Zapier or Make.com. It's designed to demonstrate the concept of building workflows using NODIT MCP integrations, with a primary focus on showcasing the user experience and interface design for a hackathon.
+NoditAuto is a powerful visual blockchain automation platform that enables users to build sophisticated crypto trading and DeFi workflows using drag-and-drop blocks. Built with NODIT MCP integrations, it provides an intuitive interface for automating complex blockchain operations without writing code.
 
-## Hackathon Focus
+## 🚀 Features
 
-This prototype is built for the [Wave Hacks hackathon](https://app.akindo.io/wave-hacks/JB29Nk61kfQpLPKr). Our core goal is to present a highly polished and understandable visual demonstration of how users would interact with and build automation workflows, emphasizing clarity and impressiveness of the visual prototype.
+### **Smart Trading Automation**
 
-## Key Visual Features:
+- Execute trades automatically based on price alerts and technical indicators
+- AI-powered trading signals and market sentiment analysis
+- Stop-loss and take-profit logic with risk management
+- Multi-exchange support (Binance, Coinbase, Uniswap, etc.)
 
-- **Visual Workflow Builder:** A central canvas using [React Flow](https://reactflow.dev/) for drag-and-drop workflow creation and visual data flow representation.
-- **Service/Action Block Library:** A left-hand panel displaying categorized, draggable blocks (triggers, actions, logic).
-- **Configurable Block Properties Panel:** A dynamic right-hand panel (or modal) for configuring selected blocks using Shadcn UI components.
+### **DeFi & Portfolio Management**
 
-## Technology Stack:
+- Automated portfolio rebalancing
+- Yield farming optimization
+- Liquidity pool management
+- Cross-chain bridge operations
 
-- **Frontend Framework:** Next.js
-- **UI Library:** Shadcn UI (components from `/components/ui`)
-- **CSS Framework:** Tailwind CSS, with custom variables and base styles defined in `globals.css`.
-- **Workflow Visualization:** React Flow
-- **Language:** TypeScript
+### **Blockchain Monitoring**
 
-## Getting Started
+- Smart contract event tracking
+- Transaction detection and filtering
+- Wallet balance monitoring
+- Gas price optimization
 
-First, run the development server:
+### **Multi-Chain Support**
+
+- Ethereum, BSC, Polygon, Arbitrum
+- Cross-chain arbitrage detection
+- Unified interface for all networks
+
+## 🛠 Technology Stack
+
+- **Frontend:** Next.js 14 with TypeScript
+- **UI Components:** Shadcn UI + Tailwind CSS
+- **Workflow Engine:** React Flow for visual workflow building
+- **Blockchain Integration:** NODIT MCP (Model Context Protocol)
+- **State Management:** React hooks and context
+- **Styling:** Tailwind CSS with custom design system
+
+## 📋 Block Categories
+
+### **Triggers**
+
+- 🔔 Price Alerts
+- 📦 Block Confirmations
+- 🔍 Transaction Detection
+- 📜 Smart Contract Events
+- 💰 Wallet Balance Changes
+- 📊 Market Signals
+- ✅ Order Fills
+- ⛽ Gas Price Thresholds
+
+### **Actions**
+
+- 📈 Execute Trades
+- 💸 Send Transactions
+- 🚀 Deploy Contracts
+- 📋 Place/Cancel Orders
+- 🔄 Transfer/Stake/Swap Tokens
+- 🌉 Bridge Tokens
+- 🎁 Claim Rewards
+
+### **Logic & Control**
+
+- 📊 Price Comparisons
+- ⚖️ Portfolio Rebalancing
+- 🛑 Stop Loss Logic
+- 🎯 Take Profit Logic
+- 🔄 Arbitrage Detection
+- ⚠️ Risk Assessment
+
+### **Data Transform**
+
+- 🧮 Price Calculators
+- 📈 Portfolio Analysis
+- 📊 Technical Indicators
+- ⛽ Gas Optimization
+- 💱 Token Conversion
+- 💹 P&L Calculations
+
+### **Storage & Tracking**
+
+- 📚 Transaction History
+- 📊 Portfolio Tracking
+- 📝 Trade Logs
+- 📈 Performance Metrics
+- 💾 Wallet Backup
+
+### **AI & Intelligence**
+
+- 🤖 AI Trading Signals
+- 😊 Market Sentiment Analysis
+- 🔮 Price Prediction
+- ⚠️ AI Risk Assessment
+- 🎯 Pattern Recognition
+
+### **Notifications**
+
+- 🚨 Trade Alerts
+- 💰 Price Notifications
+- 📊 Portfolio Updates
+- ⚠️ Risk Warnings
+- ⛽ Gas Price Alerts
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm, yarn, or pnpm
+- Git
+
+### Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/yourusername/noditauto.git
+cd noditauto
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. **Run the development server**
 
 ```bash
 npm run dev
@@ -30,27 +140,142 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📖 Usage Guide
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Building Your First Workflow
 
-## Learn More
+1. **Start on the Landing Page** - Learn about features and use cases
+2. **Navigate to Project Builder** - Click "Get Started" or "Start Building"
+3. **Drag Blocks from Library** - Choose from triggers, actions, logic, etc.
+4. **Connect Blocks** - Create workflow by connecting block outputs to inputs
+5. **Configure Each Block** - Set parameters, API keys, and conditions
+6. **Test & Deploy** - Validate workflow and activate automation
 
-To learn more about Next.js, take a look at the following resources:
+### Example Workflows
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Simple Price Alert:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+Price Alert (BTC > $50,000) → Trade Alert (Push Notification)
+```
 
-## Deploy on Vercel
+**Automated Trading:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+Market Signal (Bullish) → Risk Assessment → Execute Trade (Buy BTC) → Portfolio Update
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**DeFi Yield Farming:**
+
+```
+Yield Monitor → Compare Rates → Stake Tokens → Claim Rewards → Portfolio Tracker
+```
+
+**Portfolio Rebalancing:**
+
+```
+Schedule Trigger (Daily) → Portfolio Analyzer → Rebalance Logic → Execute Trades
+```
+
+## ⚙️ Configuration
+
+### Environment Variables
+
+Create a `.env.local` file:
+
+```env
+# NODIT MCP Configuration
+NODIT_API_KEY=your_nodit_api_key
+NODIT_ENDPOINT=https://api.nodit.io
+
+# Exchange API Keys (Optional)
+BINANCE_API_KEY=your_binance_key
+BINANCE_SECRET=your_binance_secret
+
+# Blockchain RPC URLs
+ETHEREUM_RPC_URL=your_ethereum_rpc
+BSC_RPC_URL=your_bsc_rpc
+POLYGON_RPC_URL=your_polygon_rpc
+```
+
+### Wallet Integration
+
+Connect your wallets through the configuration panel:
+
+- MetaMask
+- WalletConnect
+- Coinbase Wallet
+- Hardware Wallets (Ledger, Trezor)
+
+## 🔧 Development
+
+### Project Structure
+
+```
+noditauto/
+├── app/                    # Next.js app router
+│   ├── (mainapp)/
+│   │   └── project/        # Main workflow builder
+│   ├── page.tsx           # Landing page
+│   └── layout.tsx         # Root layout
+├── components/
+│   └── ui/                # Shadcn UI components
+├── hooks/                 # Custom React hooks
+├── lib/                   # Utility functions
+└── public/               # Static assets
+```
+
+### Available Scripts
+
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Run ESLint
+npm run type-check   # Run TypeScript check
+```
+
+## 🛡️ Security
+
+- **Non-Custodial:** Your private keys never leave your device
+- **Open Source:** Full transparency and community audits
+- **Risk Controls:** Built-in safeguards and position limits
+- **Encrypted Storage:** All sensitive data is encrypted
+- **Audit Trail:** Complete transaction and action logging
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+- 📧 Email: support@noditauto.com
+- 💬 Discord: [Join our community](https://discord.gg/noditauto)
+- 📚 Documentation: [docs.noditauto.com](https://docs.noditauto.com)
+- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/noditauto/issues)
+
+## 🙏 Acknowledgments
+
+- [NODIT MCP](https://nodit.io) for blockchain integration infrastructure
+- [React Flow](https://reactflow.dev) for the visual workflow engine
+- [Shadcn UI](https://ui.shadcn.com) for the component library
+- [Next.js](https://nextjs.org) for the application framework
+
+---
+
+**⚠️ Disclaimer:** This software is for educational and development purposes. Always test on testnets first and use at your own risk. Cryptocurrency trading and DeFi protocols involve significant financial risk.

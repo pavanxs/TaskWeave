@@ -46,33 +46,24 @@ import {
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import {
-	Webhook,
 	Play,
-	Mail,
-	Clock,
 	GitBranch,
 	Database,
 	Zap,
 	Settings,
 	Trash2,
-	Calendar,
 	FileText,
-	MessageSquare,
 	Code,
 	Filter,
 	RotateCcw,
 	AlertTriangle,
-	CloudRain,
 	Hash,
-	FileJson,
 	Upload,
 	Download,
 	Calculator,
-	Image,
 	Smartphone,
 	Monitor,
 	HardDrive,
-	Globe,
 	Search,
 	Bell,
 	Heart,
@@ -133,72 +124,72 @@ const blockCategories: {
 } = {
 	triggers: [
 		{
-			id: 'webhook',
-			label: 'Webhook Listener',
-			icon: Webhook,
+			id: 'price-alert',
+			label: 'Price Alert',
+			icon: BarChart,
 			type: 'trigger',
 			category: 'triggers',
 			hasEmbeddedControls: true,
-			controlType: 'button',
+			controlType: 'complex',
 		},
 		{
-			id: 'nodit-event',
-			label: 'NODIT MCP Event',
-			icon: Zap,
-			type: 'trigger',
-			category: 'triggers',
-			hasEmbeddedControls: true,
-			controlType: 'switch',
-		},
-		{
-			id: 'schedule',
-			label: 'Schedule Trigger',
-			icon: Calendar,
-			type: 'trigger',
-			category: 'triggers',
-			hasEmbeddedControls: true,
-			controlType: 'dropdown',
-		},
-		{
-			id: 'file-watcher',
-			label: 'File Watcher',
-			icon: Eye,
+			id: 'block-confirmation',
+			label: 'Block Confirmation',
+			icon: Box,
 			type: 'trigger',
 			category: 'triggers',
 			hasEmbeddedControls: true,
 			controlType: 'input',
 		},
 		{
-			id: 'email-received',
-			label: 'Email Received',
-			icon: Mail,
+			id: 'transaction-detected',
+			label: 'Transaction Detected',
+			icon: Hash,
 			type: 'trigger',
 			category: 'triggers',
 			hasEmbeddedControls: true,
 			controlType: 'complex',
 		},
 		{
-			id: 'database-change',
-			label: 'Database Change',
+			id: 'smart-contract-event',
+			label: 'Smart Contract Event',
+			icon: Code,
+			type: 'trigger',
+			category: 'triggers',
+			hasEmbeddedControls: true,
+			controlType: 'complex',
+		},
+		{
+			id: 'wallet-balance-change',
+			label: 'Wallet Balance Change',
 			icon: Database,
+			type: 'trigger',
+			category: 'triggers',
+			hasEmbeddedControls: true,
+			controlType: 'input',
+		},
+		{
+			id: 'market-signal',
+			label: 'Market Signal',
+			icon: GitBranch,
 			type: 'trigger',
 			category: 'triggers',
 			hasEmbeddedControls: true,
 			controlType: 'dropdown',
 		},
 		{
-			id: 'api-poll',
-			label: 'API Polling',
-			icon: RotateCcw,
+			id: 'order-fill',
+			label: 'Order Filled',
+			icon: Package,
 			type: 'trigger',
 			category: 'triggers',
 			hasEmbeddedControls: true,
-			controlType: 'complex',
+			controlType: 'switch',
 		},
 		{
-			id: 'form-submit',
-			label: 'Form Submission',
-			icon: FileText,
+			id: 'gas-price-threshold',
+			label: 'Gas Price Threshold',
+			icon: Zap,
 			type: 'trigger',
 			category: 'triggers',
 			hasEmbeddedControls: true,
@@ -207,249 +198,249 @@ const blockCategories: {
 	],
 	actions: [
 		{
-			id: 'nodit-action',
-			label: 'NODIT MCP Action',
-			icon: Zap,
+			id: 'execute-trade',
+			label: 'Execute Trade',
+			icon: Play,
 			type: 'action',
 			category: 'actions',
 			hasEmbeddedControls: true,
 			controlType: 'complex',
 		},
 		{
-			id: 'email',
-			label: 'Send Email',
-			icon: Mail,
-			type: 'action',
-			category: 'actions',
-			hasEmbeddedControls: true,
-			controlType: 'button',
-		},
-		{
-			id: 'delay',
-			label: 'Delay',
-			icon: Clock,
-			type: 'action',
-			category: 'actions',
-			hasEmbeddedControls: true,
-			controlType: 'input',
-		},
-		{
-			id: 'http-request',
-			label: 'HTTP Request',
-			icon: Database,
-			type: 'action',
-			category: 'actions',
-			hasEmbeddedControls: true,
-			controlType: 'dropdown',
-		},
-		{
-			id: 'file-upload',
-			label: 'Upload File',
+			id: 'send-transaction',
+			label: 'Send Transaction',
 			icon: Upload,
 			type: 'action',
 			category: 'actions',
 			hasEmbeddedControls: true,
+			controlType: 'complex',
+		},
+		{
+			id: 'deploy-contract',
+			label: 'Deploy Contract',
+			icon: Code,
+			type: 'action',
+			category: 'actions',
+			hasEmbeddedControls: true,
 			controlType: 'button',
 		},
 		{
-			id: 'file-download',
-			label: 'Download File',
+			id: 'place-order',
+			label: 'Place Order',
+			icon: Package,
+			type: 'action',
+			category: 'actions',
+			hasEmbeddedControls: true,
+			controlType: 'complex',
+		},
+		{
+			id: 'cancel-order',
+			label: 'Cancel Order',
+			icon: Trash2,
+			type: 'action',
+			category: 'actions',
+			hasEmbeddedControls: true,
+			controlType: 'input',
+		},
+		{
+			id: 'transfer-tokens',
+			label: 'Transfer Tokens',
 			icon: Download,
 			type: 'action',
 			category: 'actions',
 			hasEmbeddedControls: true,
-			controlType: 'input',
+			controlType: 'complex',
 		},
 		{
-			id: 'webhook-send',
-			label: 'Send Webhook',
-			icon: Webhook,
+			id: 'stake-tokens',
+			label: 'Stake Tokens',
+			icon: Layers,
 			type: 'action',
 			category: 'actions',
 			hasEmbeddedControls: true,
 			controlType: 'complex',
 		},
 		{
-			id: 'sms-send',
-			label: 'Send SMS',
-			icon: Smartphone,
-			type: 'action',
-			category: 'actions',
-			hasEmbeddedControls: true,
-			controlType: 'input',
-		},
-		{
-			id: 'slack-message',
-			label: 'Slack Message',
-			icon: MessageSquare,
+			id: 'swap-tokens',
+			label: 'Swap Tokens',
+			icon: RotateCcw,
 			type: 'action',
 			category: 'actions',
 			hasEmbeddedControls: true,
 			controlType: 'complex',
 		},
 		{
-			id: 'create-file',
-			label: 'Create File',
-			icon: FileText,
+			id: 'bridge-tokens',
+			label: 'Bridge Tokens',
+			icon: GitBranch,
 			type: 'action',
 			category: 'actions',
 			hasEmbeddedControls: true,
-			controlType: 'input',
+			controlType: 'dropdown',
+		},
+		{
+			id: 'claim-rewards',
+			label: 'Claim Rewards',
+			icon: Heart,
+			type: 'action',
+			category: 'actions',
+			hasEmbeddedControls: true,
+			controlType: 'button',
 		},
 	],
 	logic: [
 		{
-			id: 'conditional',
-			label: 'Conditional Logic',
-			icon: GitBranch,
+			id: 'price-comparison',
+			label: 'Price Comparison',
+			icon: BarChart,
 			type: 'logic',
 			category: 'logic',
 			hasEmbeddedControls: true,
 			controlType: 'complex',
 		},
 		{
-			id: 'filter',
-			label: 'Filter Data',
-			icon: Filter,
-			type: 'logic',
-			category: 'logic',
-			hasEmbeddedControls: true,
-			controlType: 'dropdown',
-		},
-		{
-			id: 'loop',
-			label: 'Loop/Iterator',
-			icon: RotateCcw,
-			type: 'logic',
-			category: 'logic',
-			hasEmbeddedControls: true,
-			controlType: 'complex',
-		},
-		{
-			id: 'switch-case',
-			label: 'Switch Case',
-			icon: Code,
-			type: 'logic',
-			category: 'logic',
-			hasEmbeddedControls: true,
-			controlType: 'dropdown',
-		},
-		{
-			id: 'error-handler',
-			label: 'Error Handler',
-			icon: AlertTriangle,
-			type: 'logic',
-			category: 'logic',
-			hasEmbeddedControls: true,
-			controlType: 'switch',
-		},
-		{
-			id: 'parallel-execute',
-			label: 'Parallel Execute',
+			id: 'portfolio-rebalance',
+			label: 'Portfolio Rebalance',
 			icon: Layers,
 			type: 'logic',
 			category: 'logic',
 			hasEmbeddedControls: true,
+			controlType: 'complex',
+		},
+		{
+			id: 'stop-loss',
+			label: 'Stop Loss Logic',
+			icon: AlertTriangle,
+			type: 'logic',
+			category: 'logic',
+			hasEmbeddedControls: true,
 			controlType: 'input',
+		},
+		{
+			id: 'take-profit',
+			label: 'Take Profit Logic',
+			icon: Heart,
+			type: 'logic',
+			category: 'logic',
+			hasEmbeddedControls: true,
+			controlType: 'input',
+		},
+		{
+			id: 'arbitrage-check',
+			label: 'Arbitrage Check',
+			icon: GitBranch,
+			type: 'logic',
+			category: 'logic',
+			hasEmbeddedControls: true,
+			controlType: 'dropdown',
+		},
+		{
+			id: 'risk-assessment',
+			label: 'Risk Assessment',
+			icon: Filter,
+			type: 'logic',
+			category: 'logic',
+			hasEmbeddedControls: true,
+			controlType: 'complex',
 		},
 	],
 	transform: [
 		{
-			id: 'json-parser',
-			label: 'JSON Parser',
-			icon: FileJson,
-			type: 'transform',
-			category: 'transform',
-			hasEmbeddedControls: true,
-			controlType: 'input',
-		},
-		{
-			id: 'data-mapper',
-			label: 'Data Mapper',
-			icon: Hash,
-			type: 'transform',
-			category: 'transform',
-			hasEmbeddedControls: true,
-			controlType: 'complex',
-		},
-		{
-			id: 'text-processor',
-			label: 'Text Processor',
-			icon: FileText,
+			id: 'price-calculator',
+			label: 'Price Calculator',
+			icon: Calculator,
 			type: 'transform',
 			category: 'transform',
 			hasEmbeddedControls: true,
 			controlType: 'dropdown',
 		},
 		{
-			id: 'calculator',
-			label: 'Math Calculator',
+			id: 'portfolio-analyzer',
+			label: 'Portfolio Analyzer',
+			icon: BarChart,
+			type: 'transform',
+			category: 'transform',
+			hasEmbeddedControls: true,
+			controlType: 'complex',
+		},
+		{
+			id: 'technical-indicators',
+			label: 'Technical Indicators',
+			icon: Monitor,
+			type: 'transform',
+			category: 'transform',
+			hasEmbeddedControls: true,
+			controlType: 'dropdown',
+		},
+		{
+			id: 'gas-optimizer',
+			label: 'Gas Optimizer',
+			icon: Zap,
+			type: 'transform',
+			category: 'transform',
+			hasEmbeddedControls: true,
+			controlType: 'switch',
+		},
+		{
+			id: 'token-converter',
+			label: 'Token Converter',
+			icon: RotateCcw,
+			type: 'transform',
+			category: 'transform',
+			hasEmbeddedControls: true,
+			controlType: 'complex',
+		},
+		{
+			id: 'profit-loss-calc',
+			label: 'P&L Calculator',
 			icon: Calculator,
 			type: 'transform',
 			category: 'transform',
 			hasEmbeddedControls: true,
 			controlType: 'input',
 		},
+	],
+	storage: [
 		{
-			id: 'image-processor',
-			label: 'Image Processor',
-			icon: Image,
-			type: 'transform',
-			category: 'transform',
+			id: 'transaction-history',
+			label: 'Transaction History',
+			icon: FileText,
+			type: 'storage',
+			category: 'storage',
 			hasEmbeddedControls: true,
 			controlType: 'dropdown',
 		},
 		{
-			id: 'csv-parser',
-			label: 'CSV Parser',
-			icon: FileText,
-			type: 'transform',
-			category: 'transform',
+			id: 'portfolio-tracker',
+			label: 'Portfolio Tracker',
+			icon: BarChart,
+			type: 'storage',
+			category: 'storage',
 			hasEmbeddedControls: true,
 			controlType: 'switch',
 		},
-	],
-	storage: [
 		{
-			id: 'database-insert',
-			label: 'Database Insert',
+			id: 'trade-logs',
+			label: 'Trade Logs',
 			icon: Database,
+			type: 'storage',
+			category: 'storage',
+			hasEmbeddedControls: true,
+			controlType: 'button',
+		},
+		{
+			id: 'performance-metrics',
+			label: 'Performance Metrics',
+			icon: Monitor,
 			type: 'storage',
 			category: 'storage',
 			hasEmbeddedControls: true,
 			controlType: 'complex',
 		},
 		{
-			id: 'file-save',
-			label: 'Save to File',
+			id: 'wallet-backup',
+			label: 'Wallet Backup',
 			icon: HardDrive,
-			type: 'storage',
-			category: 'storage',
-			hasEmbeddedControls: true,
-			controlType: 'input',
-		},
-		{
-			id: 'cloud-storage',
-			label: 'Cloud Storage',
-			icon: CloudRain,
-			type: 'storage',
-			category: 'storage',
-			hasEmbeddedControls: true,
-			controlType: 'dropdown',
-		},
-		{
-			id: 'cache-store',
-			label: 'Cache Store',
-			icon: Box,
-			type: 'storage',
-			category: 'storage',
-			hasEmbeddedControls: true,
-			controlType: 'switch',
-		},
-		{
-			id: 'backup-create',
-			label: 'Create Backup',
-			icon: Package,
 			type: 'storage',
 			category: 'storage',
 			hasEmbeddedControls: true,
@@ -458,8 +449,8 @@ const blockCategories: {
 	],
 	ai: [
 		{
-			id: 'ai-classify',
-			label: 'AI Text Classifier',
+			id: 'trading-signals',
+			label: 'AI Trading Signals',
 			icon: Search,
 			type: 'ai',
 			category: 'ai',
@@ -467,17 +458,8 @@ const blockCategories: {
 			controlType: 'complex',
 		},
 		{
-			id: 'ai-generate',
-			label: 'AI Text Generator',
-			icon: FileText,
-			type: 'ai',
-			category: 'ai',
-			hasEmbeddedControls: true,
-			controlType: 'input',
-		},
-		{
-			id: 'ai-sentiment',
-			label: 'Sentiment Analysis',
+			id: 'market-sentiment',
+			label: 'Market Sentiment AI',
 			icon: Heart,
 			type: 'ai',
 			category: 'ai',
@@ -485,28 +467,37 @@ const blockCategories: {
 			controlType: 'dropdown',
 		},
 		{
-			id: 'ai-translate',
-			label: 'AI Translator',
-			icon: Globe,
+			id: 'price-prediction',
+			label: 'Price Prediction AI',
+			icon: Eye,
 			type: 'ai',
 			category: 'ai',
 			hasEmbeddedControls: true,
 			controlType: 'complex',
 		},
 		{
-			id: 'ai-vision',
-			label: 'AI Image Analysis',
-			icon: Eye,
+			id: 'risk-ai',
+			label: 'AI Risk Assessment',
+			icon: AlertTriangle,
 			type: 'ai',
 			category: 'ai',
 			hasEmbeddedControls: true,
-			controlType: 'button',
+			controlType: 'switch',
+		},
+		{
+			id: 'pattern-recognition',
+			label: 'Pattern Recognition',
+			icon: Search,
+			type: 'ai',
+			category: 'ai',
+			hasEmbeddedControls: true,
+			controlType: 'dropdown',
 		},
 	],
 	notification: [
 		{
-			id: 'push-notification',
-			label: 'Push Notification',
+			id: 'trade-alert',
+			label: 'Trade Alert',
 			icon: Bell,
 			type: 'notification',
 			category: 'notification',
@@ -514,31 +505,40 @@ const blockCategories: {
 			controlType: 'complex',
 		},
 		{
-			id: 'desktop-notification',
-			label: 'Desktop Alert',
-			icon: Monitor,
+			id: 'price-notification',
+			label: 'Price Notification',
+			icon: BarChart,
 			type: 'notification',
 			category: 'notification',
 			hasEmbeddedControls: true,
 			controlType: 'input',
 		},
 		{
-			id: 'log-message',
-			label: 'Log Message',
-			icon: FileText,
+			id: 'portfolio-update',
+			label: 'Portfolio Update',
+			icon: Monitor,
+			type: 'notification',
+			category: 'notification',
+			hasEmbeddedControls: true,
+			controlType: 'switch',
+		},
+		{
+			id: 'risk-warning',
+			label: 'Risk Warning',
+			icon: AlertTriangle,
 			type: 'notification',
 			category: 'notification',
 			hasEmbeddedControls: true,
 			controlType: 'dropdown',
 		},
 		{
-			id: 'analytics-track',
-			label: 'Track Analytics',
-			icon: BarChart,
+			id: 'gas-alert',
+			label: 'Gas Price Alert',
+			icon: Zap,
 			type: 'notification',
 			category: 'notification',
 			hasEmbeddedControls: true,
-			controlType: 'complex',
+			controlType: 'input',
 		},
 	],
 };
@@ -568,17 +568,15 @@ const CustomNode = ({
 						className='mt-2 w-full h-6 text-xs'
 						onClick={(e) => e.stopPropagation()}>
 						<Play className='w-3 h-3 mr-1' />
-						{data.blockId === 'email'
-							? 'Send'
-							: data.blockId === 'webhook'
-							? 'Listen'
-							: data.blockId === 'file-upload'
-							? 'Upload'
-							: data.blockId === 'backup-create'
+						{data.blockId === 'deploy-contract'
+							? 'Deploy'
+							: data.blockId === 'trade-logs'
+							? 'Export'
+							: data.blockId === 'wallet-backup'
 							? 'Backup'
-							: data.blockId === 'ai-vision'
-							? 'Analyze'
-							: 'Run'}
+							: data.blockId === 'claim-rewards'
+							? 'Claim'
+							: 'Execute'}
 					</Button>
 				);
 
@@ -586,30 +584,24 @@ const CustomNode = ({
 				return (
 					<Input
 						placeholder={
-							data.blockId === 'delay'
-								? 'Seconds'
-								: data.blockId === 'file-watcher'
-								? 'Path'
-								: data.blockId === 'form-submit'
-								? 'Form ID'
-								: data.blockId === 'file-download'
-								? 'URL'
-								: data.blockId === 'sms-send'
-								? 'Phone'
-								: data.blockId === 'create-file'
-								? 'Filename'
-								: data.blockId === 'json-parser'
-								? 'JSON Path'
-								: data.blockId === 'calculator'
-								? 'Formula'
-								: data.blockId === 'file-save'
-								? 'Path'
-								: data.blockId === 'ai-generate'
-								? 'Prompt'
-								: data.blockId === 'desktop-notification'
-								? 'Title'
-								: data.blockId === 'parallel-execute'
-								? 'Max Threads'
+							data.blockId === 'block-confirmation'
+								? 'Block Count'
+								: data.blockId === 'wallet-balance-change'
+								? 'Wallet Address'
+								: data.blockId === 'gas-price-threshold'
+								? 'Gwei Limit'
+								: data.blockId === 'cancel-order'
+								? 'Order ID'
+								: data.blockId === 'stop-loss'
+								? 'Stop Price'
+								: data.blockId === 'take-profit'
+								? 'Target Price'
+								: data.blockId === 'profit-loss-calc'
+								? 'Entry Price'
+								: data.blockId === 'price-notification'
+								? 'Target Price'
+								: data.blockId === 'gas-alert'
+								? 'Max Gwei'
 								: 'Value'
 						}
 						value={localValue}
@@ -625,26 +617,29 @@ const CustomNode = ({
 			case 'dropdown':
 				const getDropdownOptions = () => {
 					switch (data.blockId) {
-						case 'schedule':
-							return ['Every hour', 'Daily', 'Weekly', 'Monthly'];
-						case 'database-change':
-							return ['INSERT', 'UPDATE', 'DELETE'];
-						case 'http-request':
-							return ['GET', 'POST', 'PUT', 'DELETE'];
-						case 'filter':
-							return ['Equals', 'Contains', 'Greater than', 'Less than'];
-						case 'switch-case':
-							return ['String match', 'Number range', 'Boolean'];
-						case 'text-processor':
-							return ['Uppercase', 'Lowercase', 'Replace', 'Extract'];
-						case 'image-processor':
-							return ['Resize', 'Crop', 'Compress', 'Format'];
-						case 'cloud-storage':
-							return ['AWS S3', 'Google Drive', 'Dropbox'];
-						case 'ai-sentiment':
-							return ['Positive/Negative', 'Detailed', 'Confidence'];
-						case 'log-message':
-							return ['Info', 'Warning', 'Error', 'Debug'];
+						case 'market-signal':
+							return ['Bull Signal', 'Bear Signal', 'Neutral', 'Volume Spike'];
+						case 'bridge-tokens':
+							return ['Ethereum → BSC', 'BSC → Polygon', 'Polygon → Arbitrum'];
+						case 'arbitrage-check':
+							return ['CEX vs DEX', 'Cross-chain', 'Multi-pair'];
+						case 'price-calculator':
+							return ['USD Price', 'Token Ratio', 'Market Cap', 'Volume'];
+						case 'technical-indicators':
+							return ['RSI', 'MACD', 'Bollinger Bands', 'Moving Average'];
+						case 'transaction-history':
+							return ['Last 24h', 'Last Week', 'Last Month', 'All Time'];
+						case 'market-sentiment':
+							return ['Bullish', 'Bearish', 'Neutral', 'Fear/Greed'];
+						case 'pattern-recognition':
+							return [
+								'Head & Shoulders',
+								'Double Top',
+								'Triangle',
+								'Support/Resistance',
+							];
+						case 'risk-warning':
+							return ['High Risk', 'Medium Risk', 'Low Risk', 'Critical'];
 						default:
 							return ['Option 1', 'Option 2', 'Option 3'];
 					}
@@ -673,14 +668,16 @@ const CustomNode = ({
 						className='flex items-center justify-between mt-2'
 						onClick={(e) => e.stopPropagation()}>
 						<span className='text-xs text-muted-foreground'>
-							{data.blockId === 'nodit-event'
-								? 'Active'
-								: data.blockId === 'error-handler'
-								? 'Enabled'
-								: data.blockId === 'csv-parser'
-								? 'Headers'
-								: data.blockId === 'cache-store'
-								? 'Auto-expire'
+							{data.blockId === 'order-fill'
+								? 'Auto Fill'
+								: data.blockId === 'gas-optimizer'
+								? 'Optimize'
+								: data.blockId === 'portfolio-tracker'
+								? 'Live Track'
+								: data.blockId === 'risk-ai'
+								? 'AI Enabled'
+								: data.blockId === 'portfolio-update'
+								? 'Real-time'
 								: 'Enable'}
 						</span>
 						<Switch
@@ -694,162 +691,275 @@ const CustomNode = ({
 			case 'complex':
 				return (
 					<div className='mt-2 space-y-1' onClick={(e) => e.stopPropagation()}>
-						{data.blockId === 'email-received' && (
+						{data.blockId === 'price-alert' && (
 							<>
-								<Input placeholder='Email address' className='h-5 text-xs' />
-								<Badge variant='outline' className='text-xs'>
-									<Mail className='w-2 h-2 mr-1' />
-									IMAP
-								</Badge>
-							</>
-						)}
-						{data.blockId === 'api-poll' && (
-							<>
-								<Input placeholder='API URL' className='h-5 text-xs' />
+								<Input placeholder='Token Symbol' className='h-5 text-xs' />
 								<div className='flex gap-1'>
 									<Badge variant='outline' className='text-xs'>
-										30s
-									</Badge>
-									<Badge variant='outline' className='text-xs'>
-										JSON
-									</Badge>
-								</div>
-							</>
-						)}
-						{data.blockId === 'nodit-action' && (
-							<>
-								<Input placeholder='Library ID' className='h-5 text-xs' />
-								<div className='flex gap-1'>
-									<Badge variant='secondary' className='text-xs'>
-										MCP
-									</Badge>
-									<Badge variant='outline' className='text-xs'>
-										{data.configured ? 'Ready' : 'Setup'}
-									</Badge>
-								</div>
-							</>
-						)}
-						{data.blockId === 'webhook-send' && (
-							<>
-								<Input placeholder='Webhook URL' className='h-5 text-xs' />
-								<Badge variant='outline' className='text-xs'>
-									POST
-								</Badge>
-							</>
-						)}
-						{data.blockId === 'slack-message' && (
-							<>
-								<Input placeholder='Channel' className='h-5 text-xs' />
-								<div className='flex gap-1'>
-									<Badge variant='outline' className='text-xs'>
-										#general
+										$45,000
 									</Badge>
 									<Badge variant='secondary' className='text-xs'>
-										Bot
+										Above
 									</Badge>
 								</div>
 							</>
 						)}
-						{data.blockId === 'conditional' && (
+						{data.blockId === 'transaction-detected' && (
 							<>
-								<Input placeholder='Variable' className='h-5 text-xs' />
+								<Input placeholder='Wallet Address' className='h-5 text-xs' />
 								<div className='flex gap-1'>
 									<Badge variant='outline' className='text-xs'>
-										==
-									</Badge>
-									<Badge variant='outline' className='text-xs'>
-										Value
-									</Badge>
-								</div>
-							</>
-						)}
-						{data.blockId === 'loop' && (
-							<>
-								<Input placeholder='Array/List' className='h-5 text-xs' />
-								<Badge variant='outline' className='text-xs'>
-									<RotateCcw className='w-2 h-2 mr-1' />
-									Each item
-								</Badge>
-							</>
-						)}
-						{data.blockId === 'data-mapper' && (
-							<>
-								<Input placeholder='Input field' className='h-5 text-xs' />
-								<div className='flex gap-1'>
-									<Badge variant='outline' className='text-xs'>
-										→
+										ETH
 									</Badge>
 									<Badge variant='secondary' className='text-xs'>
-										Output
+										Incoming
 									</Badge>
 								</div>
 							</>
 						)}
-						{data.blockId === 'database-insert' && (
+						{data.blockId === 'smart-contract-event' && (
 							<>
-								<Input placeholder='Table name' className='h-5 text-xs' />
+								<Input placeholder='Contract Address' className='h-5 text-xs' />
 								<div className='flex gap-1'>
 									<Badge variant='outline' className='text-xs'>
-										MySQL
+										Transfer
 									</Badge>
 									<Badge variant='secondary' className='text-xs'>
-										INSERT
+										Event
 									</Badge>
 								</div>
 							</>
 						)}
-						{data.blockId === 'ai-classify' && (
+						{data.blockId === 'execute-trade' && (
 							<>
-								<Input placeholder='Text input' className='h-5 text-xs' />
+								<Separator />
+								<div className='space-y-3'>
+									<div>
+										<Label htmlFor='trading-pair'>Trading Pair</Label>
+										<Input
+											id='trading-pair'
+											placeholder='e.g., BTC/USDT'
+											className='mt-1'
+										/>
+									</div>
+									<div>
+										<Label htmlFor='order-type'>Order Type</Label>
+										<Select>
+											<SelectTrigger className='mt-1'>
+												<SelectValue placeholder='Select order type' />
+											</SelectTrigger>
+											<SelectContent>
+												<SelectItem value='market'>Market Order</SelectItem>
+												<SelectItem value='limit'>Limit Order</SelectItem>
+												<SelectItem value='stop-loss'>Stop Loss</SelectItem>
+												<SelectItem value='take-profit'>Take Profit</SelectItem>
+											</SelectContent>
+										</Select>
+									</div>
+									<div>
+										<Label htmlFor='amount'>Amount</Label>
+										<Input
+											id='amount'
+											placeholder='Enter amount...'
+											className='mt-1'
+										/>
+									</div>
+									<div>
+										<Label htmlFor='exchange'>Exchange</Label>
+										<Select>
+											<SelectTrigger className='mt-1'>
+												<SelectValue placeholder='Select exchange' />
+											</SelectTrigger>
+											<SelectContent>
+												<SelectItem value='binance'>Binance</SelectItem>
+												<SelectItem value='coinbase'>Coinbase Pro</SelectItem>
+												<SelectItem value='kraken'>Kraken</SelectItem>
+												<SelectItem value='uniswap'>Uniswap</SelectItem>
+											</SelectContent>
+										</Select>
+									</div>
+								</div>
+							</>
+						)}
+						{data.blockId === 'send-transaction' && (
+							<>
+								<Input placeholder='To Address' className='h-5 text-xs' />
+								<div className='flex gap-1'>
+									<Badge variant='outline' className='text-xs'>
+										0.1 ETH
+									</Badge>
+									<Badge variant='secondary' className='text-xs'>
+										Fast
+									</Badge>
+								</div>
+							</>
+						)}
+						{data.blockId === 'place-order' && (
+							<>
+								<Input placeholder='Price' className='h-5 text-xs' />
+								<div className='flex gap-1'>
+									<Badge variant='outline' className='text-xs'>
+										Limit
+									</Badge>
+									<Badge variant='secondary' className='text-xs'>
+										GTC
+									</Badge>
+								</div>
+							</>
+						)}
+						{data.blockId === 'transfer-tokens' && (
+							<>
+								<Input placeholder='Amount' className='h-5 text-xs' />
+								<div className='flex gap-1'>
+									<Badge variant='outline' className='text-xs'>
+										USDC
+									</Badge>
+									<Badge variant='secondary' className='text-xs'>
+										L1
+									</Badge>
+								</div>
+							</>
+						)}
+						{data.blockId === 'stake-tokens' && (
+							<>
+								<Input placeholder='Stake Amount' className='h-5 text-xs' />
+								<div className='flex gap-1'>
+									<Badge variant='outline' className='text-xs'>
+										ETH 2.0
+									</Badge>
+									<Badge variant='secondary' className='text-xs'>
+										5.2% APY
+									</Badge>
+								</div>
+							</>
+						)}
+						{data.blockId === 'swap-tokens' && (
+							<>
+								<Input placeholder='From → To' className='h-5 text-xs' />
+								<div className='flex gap-1'>
+									<Badge variant='outline' className='text-xs'>
+										Uniswap
+									</Badge>
+									<Badge variant='secondary' className='text-xs'>
+										Best Rate
+									</Badge>
+								</div>
+							</>
+						)}
+						{data.blockId === 'price-comparison' && (
+							<>
+								<Input placeholder='Token A vs B' className='h-5 text-xs' />
+								<div className='flex gap-1'>
+									<Badge variant='outline' className='text-xs'>
+										&gt;
+									</Badge>
+									<Badge variant='secondary' className='text-xs'>
+										Ratio
+									</Badge>
+								</div>
+							</>
+						)}
+						{data.blockId === 'portfolio-rebalance' && (
+							<>
+								<Input placeholder='Target %' className='h-5 text-xs' />
+								<div className='flex gap-1'>
+									<Badge variant='outline' className='text-xs'>
+										60/40
+									</Badge>
+									<Badge variant='secondary' className='text-xs'>
+										Auto
+									</Badge>
+								</div>
+							</>
+						)}
+						{data.blockId === 'risk-assessment' && (
+							<>
+								<Input placeholder='Risk Score' className='h-5 text-xs' />
+								<div className='flex gap-1'>
+									<Badge variant='outline' className='text-xs'>
+										7/10
+									</Badge>
+									<Badge variant='secondary' className='text-xs'>
+										High
+									</Badge>
+								</div>
+							</>
+						)}
+						{data.blockId === 'portfolio-analyzer' && (
+							<>
+								<Input placeholder='Portfolio ID' className='h-5 text-xs' />
+								<div className='flex gap-1'>
+									<Badge variant='outline' className='text-xs'>
+										+15.3%
+									</Badge>
+									<Badge variant='secondary' className='text-xs'>
+										YTD
+									</Badge>
+								</div>
+							</>
+						)}
+						{data.blockId === 'token-converter' && (
+							<>
+								<Input placeholder='Convert Rate' className='h-5 text-xs' />
+								<div className='flex gap-1'>
+									<Badge variant='outline' className='text-xs'>
+										1:1500
+									</Badge>
+									<Badge variant='secondary' className='text-xs'>
+										ETH/USD
+									</Badge>
+								</div>
+							</>
+						)}
+						{data.blockId === 'performance-metrics' && (
+							<>
+								<Input placeholder='Timeframe' className='h-5 text-xs' />
+								<div className='flex gap-1'>
+									<Badge variant='outline' className='text-xs'>
+										Sharpe: 2.1
+									</Badge>
+									<Badge variant='secondary' className='text-xs'>
+										Metrics
+									</Badge>
+								</div>
+							</>
+						)}
+						{data.blockId === 'trading-signals' && (
+							<>
+								<Input placeholder='Signal Type' className='h-5 text-xs' />
 								<div className='flex gap-1'>
 									<Badge variant='outline' className='text-xs'>
 										GPT-4
 									</Badge>
 									<Badge variant='secondary' className='text-xs'>
-										Category
+										Bullish
 									</Badge>
 								</div>
 							</>
 						)}
-						{data.blockId === 'ai-translate' && (
+						{data.blockId === 'price-prediction' && (
 							<>
+								<Input placeholder='Prediction Model' className='h-5 text-xs' />
 								<div className='flex gap-1'>
 									<Badge variant='outline' className='text-xs'>
-										EN
-									</Badge>
-									<Badge variant='outline' className='text-xs'>
-										→
+										ML
 									</Badge>
 									<Badge variant='secondary' className='text-xs'>
-										ES
+										$50K
 									</Badge>
 								</div>
 							</>
 						)}
-						{data.blockId === 'push-notification' && (
+						{data.blockId === 'trade-alert' && (
 							<>
-								<Input placeholder='Title' className='h-5 text-xs' />
+								<Input placeholder='Alert Type' className='h-5 text-xs' />
 								<div className='flex gap-1'>
 									<Badge variant='outline' className='text-xs'>
 										<Smartphone className='w-2 h-2 mr-1' />
-										Mobile
-									</Badge>
-									<Badge variant='secondary' className='text-xs'>
 										Push
 									</Badge>
-								</div>
-							</>
-						)}
-						{data.blockId === 'analytics-track' && (
-							<>
-								<Input placeholder='Event name' className='h-5 text-xs' />
-								<div className='flex gap-1'>
-									<Badge variant='outline' className='text-xs'>
-										<BarChart className='w-2 h-2 mr-1' />
-										Track
-									</Badge>
 									<Badge variant='secondary' className='text-xs'>
-										GA4
+										Instant
 									</Badge>
 								</div>
 							</>
@@ -1211,45 +1321,41 @@ export default function ProjectPage() {
 							/>
 						</div>
 
-						{data.blockId === 'nodit-action' && (
+						{data.blockId === 'portfolio-rebalance' && (
 							<>
 								<Separator />
 								<div className='space-y-3'>
 									<div>
-										<Label htmlFor='api-key'>API Key</Label>
+										<Label htmlFor='target-allocation'>Target Allocation</Label>
 										<Input
-											id='api-key'
-											type='password'
-											placeholder='Enter your API key...'
+											id='target-allocation'
+											placeholder='e.g., 60% BTC, 40% ETH'
 											className='mt-1'
 										/>
 									</div>
 									<div>
-										<Label htmlFor='library-id'>NODIT Library ID</Label>
+										<Label htmlFor='rebalance-threshold'>
+											Rebalance Threshold
+										</Label>
 										<Input
-											id='library-id'
-											placeholder='e.g., /org/project'
+											id='rebalance-threshold'
+											placeholder='e.g., 5%'
 											className='mt-1'
 										/>
 									</div>
 									<div>
-										<Label htmlFor='function-name'>Function Name</Label>
-										<Input
-											id='function-name'
-											placeholder='Enter function name...'
-											className='mt-1'
-										/>
-									</div>
-									<div>
-										<Label htmlFor='auth-type'>Authentication Type</Label>
+										<Label htmlFor='rebalance-frequency'>Frequency</Label>
 										<Select>
 											<SelectTrigger className='mt-1'>
-												<SelectValue placeholder='Select auth type' />
+												<SelectValue placeholder='Select frequency' />
 											</SelectTrigger>
 											<SelectContent>
-												<SelectItem value='bearer'>Bearer Token</SelectItem>
-												<SelectItem value='api-key'>API Key</SelectItem>
-												<SelectItem value='oauth'>OAuth 2.0</SelectItem>
+												<SelectItem value='daily'>Daily</SelectItem>
+												<SelectItem value='weekly'>Weekly</SelectItem>
+												<SelectItem value='monthly'>Monthly</SelectItem>
+												<SelectItem value='on-threshold'>
+													On Threshold
+												</SelectItem>
 											</SelectContent>
 										</Select>
 									</div>
@@ -1257,67 +1363,171 @@ export default function ProjectPage() {
 							</>
 						)}
 
-						{data.blockId === 'conditional' && (
+						{data.blockId === 'trading-signals' && (
 							<>
 								<Separator />
 								<div className='space-y-3'>
 									<div>
-										<Label htmlFor='value-a'>Value A</Label>
-										<Input
-											id='value-a'
-											placeholder='First value...'
-											className='mt-1'
-										/>
-									</div>
-									<div>
-										<Label htmlFor='operator'>Operator</Label>
+										<Label htmlFor='signal-source'>Signal Source</Label>
 										<Select>
 											<SelectTrigger className='mt-1'>
-												<SelectValue placeholder='Select operator' />
+												<SelectValue placeholder='Select AI model' />
 											</SelectTrigger>
 											<SelectContent>
-												<SelectItem value='equals'>Equals</SelectItem>
-												<SelectItem value='contains'>Contains</SelectItem>
-												<SelectItem value='greater'>Greater Than</SelectItem>
-												<SelectItem value='less'>Less Than</SelectItem>
+												<SelectItem value='gpt4'>GPT-4 Analysis</SelectItem>
+												<SelectItem value='claude'>Claude AI</SelectItem>
+												<SelectItem value='custom'>Custom Model</SelectItem>
 											</SelectContent>
 										</Select>
 									</div>
 									<div>
-										<Label htmlFor='value-b'>Value B</Label>
+										<Label htmlFor='confidence-threshold'>
+											Confidence Threshold
+										</Label>
 										<Input
-											id='value-b'
-											placeholder='Second value...'
+											id='confidence-threshold'
+											placeholder='e.g., 75%'
 											className='mt-1'
 										/>
+									</div>
+									<div>
+										<Label htmlFor='signal-timeframe'>Timeframe</Label>
+										<Select>
+											<SelectTrigger className='mt-1'>
+												<SelectValue placeholder='Select timeframe' />
+											</SelectTrigger>
+											<SelectContent>
+												<SelectItem value='1m'>1 Minute</SelectItem>
+												<SelectItem value='5m'>5 Minutes</SelectItem>
+												<SelectItem value='1h'>1 Hour</SelectItem>
+												<SelectItem value='1d'>1 Day</SelectItem>
+											</SelectContent>
+										</Select>
 									</div>
 								</div>
 							</>
 						)}
 
-						{data.blockId === 'webhook' && (
+						{data.blockId === 'execute-trade' && (
 							<>
 								<Separator />
 								<div className='space-y-3'>
 									<div>
-										<Label htmlFor='webhook-url'>Webhook URL</Label>
+										<Label htmlFor='trading-pair'>Trading Pair</Label>
 										<Input
-											id='webhook-url'
-											placeholder='https://...'
+											id='trading-pair'
+											placeholder='e.g., BTC/USDT'
 											className='mt-1'
 										/>
 									</div>
 									<div>
-										<Label htmlFor='http-method'>HTTP Method</Label>
+										<Label htmlFor='order-type'>Order Type</Label>
 										<Select>
 											<SelectTrigger className='mt-1'>
-												<SelectValue placeholder='Select method' />
+												<SelectValue placeholder='Select order type' />
 											</SelectTrigger>
 											<SelectContent>
-												<SelectItem value='get'>GET</SelectItem>
-												<SelectItem value='post'>POST</SelectItem>
-												<SelectItem value='put'>PUT</SelectItem>
-												<SelectItem value='delete'>DELETE</SelectItem>
+												<SelectItem value='market'>Market Order</SelectItem>
+												<SelectItem value='limit'>Limit Order</SelectItem>
+												<SelectItem value='stop-loss'>Stop Loss</SelectItem>
+												<SelectItem value='take-profit'>Take Profit</SelectItem>
+											</SelectContent>
+										</Select>
+									</div>
+									<div>
+										<Label htmlFor='amount'>Amount</Label>
+										<Input
+											id='amount'
+											placeholder='Enter amount...'
+											className='mt-1'
+										/>
+									</div>
+									<div>
+										<Label htmlFor='exchange'>Exchange</Label>
+										<Select>
+											<SelectTrigger className='mt-1'>
+												<SelectValue placeholder='Select exchange' />
+											</SelectTrigger>
+											<SelectContent>
+												<SelectItem value='binance'>Binance</SelectItem>
+												<SelectItem value='coinbase'>Coinbase Pro</SelectItem>
+												<SelectItem value='kraken'>Kraken</SelectItem>
+												<SelectItem value='uniswap'>Uniswap</SelectItem>
+											</SelectContent>
+										</Select>
+									</div>
+								</div>
+							</>
+						)}
+
+						{data.blockId === 'price-alert' && (
+							<>
+								<Separator />
+								<div className='space-y-3'>
+									<div>
+										<Label htmlFor='token-symbol'>Token Symbol</Label>
+										<Input
+											id='token-symbol'
+											placeholder='e.g., BTC, ETH, USDT'
+											className='mt-1'
+										/>
+									</div>
+									<div>
+										<Label htmlFor='target-price'>Target Price</Label>
+										<Input
+											id='target-price'
+											placeholder='Enter target price...'
+											className='mt-1'
+										/>
+									</div>
+									<div>
+										<Label htmlFor='condition'>Condition</Label>
+										<Select>
+											<SelectTrigger className='mt-1'>
+												<SelectValue placeholder='Select condition' />
+											</SelectTrigger>
+											<SelectContent>
+												<SelectItem value='above'>Above Target</SelectItem>
+												<SelectItem value='below'>Below Target</SelectItem>
+												<SelectItem value='crosses'>Crosses Price</SelectItem>
+											</SelectContent>
+										</Select>
+									</div>
+								</div>
+							</>
+						)}
+
+						{data.blockId === 'smart-contract-event' && (
+							<>
+								<Separator />
+								<div className='space-y-3'>
+									<div>
+										<Label htmlFor='contract-address'>Contract Address</Label>
+										<Input
+											id='contract-address'
+											placeholder='0x...'
+											className='mt-1'
+										/>
+									</div>
+									<div>
+										<Label htmlFor='event-name'>Event Name</Label>
+										<Input
+											id='event-name'
+											placeholder='e.g., Transfer, Approval'
+											className='mt-1'
+										/>
+									</div>
+									<div>
+										<Label htmlFor='network'>Network</Label>
+										<Select>
+											<SelectTrigger className='mt-1'>
+												<SelectValue placeholder='Select network' />
+											</SelectTrigger>
+											<SelectContent>
+												<SelectItem value='ethereum'>Ethereum</SelectItem>
+												<SelectItem value='bsc'>BSC</SelectItem>
+												<SelectItem value='polygon'>Polygon</SelectItem>
+												<SelectItem value='arbitrum'>Arbitrum</SelectItem>
 											</SelectContent>
 										</Select>
 									</div>
