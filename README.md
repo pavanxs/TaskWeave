@@ -182,27 +182,6 @@ Yield Monitor → Compare Rates → Stake Tokens → Claim Rewards → Portfolio
 Schedule Trigger (Daily) → Portfolio Analyzer → Rebalance Logic → Execute Trades
 ```
 
-## ⚙️ Configuration
-
-### Environment Variables
-
-Create a `.env.local` file:
-
-```env
-# NODIT MCP Configuration
-NODIT_API_KEY=your_nodit_api_key
-NODIT_ENDPOINT=https://api.nodit.io
-
-# Exchange API Keys (Optional)
-BINANCE_API_KEY=your_binance_key
-BINANCE_SECRET=your_binance_secret
-
-# Blockchain RPC URLs
-ETHEREUM_RPC_URL=your_ethereum_rpc
-BSC_RPC_URL=your_bsc_rpc
-POLYGON_RPC_URL=your_polygon_rpc
-```
-
 ### Wallet Integration
 
 Connect your wallets through the configuration panel:
@@ -258,20 +237,6 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 🆘 Support
 
-- 📧 Email: support@noditauto.com
-- 💬 Discord: [Join our community](https://discord.gg/noditauto)
-- 📚 Documentation: [docs.noditauto.com](https://docs.noditauto.com)
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/noditauto/issues)
-
-## 🙏 Acknowledgments
-
-- [NODIT MCP](https://nodit.io) for blockchain integration infrastructure
-- [React Flow](https://reactflow.dev) for the visual workflow engine
-- [Shadcn UI](https://ui.shadcn.com) for the component library
-- [Next.js](https://nextjs.org) for the application framework
-
----
 
 **⚠️ Disclaimer:** This software is for educational and development purposes. Always test on testnets first and use at your own risk. Cryptocurrency trading and DeFi protocols involve significant financial risk.
