@@ -192,10 +192,18 @@ export default function ProjectPage() {
 
 			if (!reactFlowBounds || !reactFlowInstance) return;
 
-			const position = reactFlowInstance.screenToFlowPosition({
-				x: event.clientX - reactFlowBounds.left,
-				y: event.clientY - reactFlowBounds.top,
+			// More precise position calculation with centering
+			const dropPosition = reactFlowInstance.screenToFlowPosition({
+				x: event.clientX,
+				y: event.clientY,
 			});
+
+			// Center the block on the drop position
+			// Assuming block width ~150px and height ~40px based on CSS
+			const position = {
+				x: dropPosition.x - 75, // Half of min-width (150px)
+				y: dropPosition.y - 20, // Half of estimated height
+			};
 
 			// Find the original block to get the icon
 			const allBlocks = [
