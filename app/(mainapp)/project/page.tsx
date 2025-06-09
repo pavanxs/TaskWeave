@@ -78,17 +78,37 @@ const blockCategories: {
 	logic: BlockData[];
 } = {
 	triggers: [
-		{ id: "webhook", label: "Webhook Listener", icon: Webhook, type: "trigger" },
-		{ id: "nodit-event", label: "NODIT MCP Event", icon: Zap, type: "trigger" },
+		{
+			id: 'webhook',
+			label: 'Webhook Listener',
+			icon: Webhook,
+			type: 'trigger',
+		},
+		{ id: 'nodit-event', label: 'NODIT MCP Event', icon: Zap, type: 'trigger' },
 	],
 	actions: [
-		{ id: "nodit-action", label: "NODIT MCP Action", icon: Zap, type: "action" },
-		{ id: "email", label: "Send Email", icon: Mail, type: "action" },
-		{ id: "delay", label: "Delay", icon: Clock, type: "action" },
-		{ id: "http-request", label: "HTTP Request", icon: Database, type: "action" },
+		{
+			id: 'nodit-action',
+			label: 'NODIT MCP Action',
+			icon: Zap,
+			type: 'action',
+		},
+		{ id: 'email', label: 'Send Email', icon: Mail, type: 'action' },
+		{ id: 'delay', label: 'Delay', icon: Clock, type: 'action' },
+		{
+			id: 'http-request',
+			label: 'HTTP Request',
+			icon: Database,
+			type: 'action',
+		},
 	],
 	logic: [
-		{ id: "conditional", label: "Conditional Logic", icon: GitBranch, type: "logic" },
+		{
+			id: 'conditional',
+			label: 'Conditional Logic',
+			icon: GitBranch,
+			type: 'logic',
+		},
 	],
 };
 

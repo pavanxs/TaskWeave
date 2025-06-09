@@ -1,4 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NODIT Flow - Visual Automation Prototype
+
+This project is a visually intuitive front-end prototype of an automation platform, similar to Zapier or Make.com. It's designed to demonstrate the concept of building workflows using NODIT MCP integrations, with a primary focus on showcasing the user experience and interface design for a hackathon.
+
+## Hackathon Focus
+
+This prototype is built for the [Wave Hacks hackathon](https://app.akindo.io/wave-hacks/JB29Nk61kfQpLPKr). Our core goal is to present a highly polished and understandable visual demonstration of how users would interact with and build automation workflows, emphasizing clarity and impressiveness of the visual prototype.
+
+## Key Visual Features:
+
+- **Visual Workflow Builder:** A central canvas using [React Flow](https://reactflow.dev/) for drag-and-drop workflow creation and visual data flow representation.
+- **Service/Action Block Library:** A left-hand panel displaying categorized, draggable blocks (triggers, actions, logic).
+- **Configurable Block Properties Panel:** A dynamic right-hand panel (or modal) for configuring selected blocks using Shadcn UI components.
+
+## Technology Stack:
+
+- **Frontend Framework:** Next.js
+- **UI Library:** Shadcn UI (components from `/components/ui`)
+- **CSS Framework:** Tailwind CSS, with custom variables and base styles defined in `globals.css`.
+- **Workflow Visualization:** React Flow
+- **Language:** TypeScript
 
 ## Getting Started
 
