@@ -1,4 +1,4 @@
-# NODIT Flow - Visual Automation Prototype
+# TaskWeave
 
 This project is a visually intuitive front-end prototype of an automation platform, similar to Zapier or Make.com. It's designed to demonstrate the concept of building workflows using NODIT MCP integrations, with a primary focus on showcasing the user experience and interface design for a hackathon.
 
