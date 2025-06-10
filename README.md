@@ -2,6 +2,12 @@
 
 NoditAuto is a powerful visual blockchain automation platform that enables users to build sophisticated crypto trading and DeFi workflows using drag-and-drop blocks. Built with NODIT MCP integrations, it provides an intuitive interface for automating complex blockchain operations without writing code.
 
+### Example Workflows
+
+Here is an example of a workflow built using TaskWeave:
+
+![TaskWeave Workflow Example](public/image.png)
+
 ## 🚀 Features
 
 ### **Smart Trading Automation**
