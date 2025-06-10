@@ -4,19 +4,18 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
 	BarChart,
 	Zap,
 	Shield,
-	Clock,
+
 	TrendingUp,
 	Bot,
 	Layers,
 	GitBranch,
 	ArrowRight,
-	CheckCircle,
+
 	AlertTriangle,
 	Database,
 	Eye,
@@ -25,7 +24,7 @@ import {
 	Upload,
 	Download,
 	Calculator,
-	Smartphone,
+
 	Monitor,
 	HardDrive,
 	Search,
@@ -38,7 +37,6 @@ import {
 	RotateCcw,
 	FileText,
 	Trash2,
-	Settings,
 } from 'lucide-react';
 
 // Block categories with detailed explanations
@@ -478,7 +476,7 @@ const blockCategories = {
 			{
 				id: 'portfolio-analyzer',
 				name: 'Portfolio Analyzer',
-				icon: BarChart,
+			icon: BarChart,
 				description:
 					'Analyzes portfolio performance, risk, and optimization opportunities',
 				useCases: ['Performance tracking', 'Risk analysis', 'Optimization'],
@@ -561,7 +559,7 @@ const blockCategories = {
 				id: 'transaction-history',
 				name: 'Transaction History',
 				icon: FileText,
-				description:
+			description:
 					'Stores and retrieves comprehensive transaction history across chains',
 				useCases: ['Record keeping', 'Tax reporting', 'Analysis'],
 				features: [
@@ -575,7 +573,7 @@ const blockCategories = {
 				id: 'portfolio-tracker',
 				name: 'Portfolio Tracker',
 				icon: BarChart,
-				description:
+			description:
 					'Tracks portfolio composition, value, and performance over time',
 				useCases: ['Portfolio management', 'Performance analysis', 'Reporting'],
 				features: [
@@ -589,7 +587,7 @@ const blockCategories = {
 				id: 'trade-logs',
 				name: 'Trade Logs',
 				icon: Database,
-				description:
+			description:
 					'Maintains detailed logs of all trading activities and decisions',
 				useCases: ['Audit trails', 'Strategy analysis', 'Compliance'],
 				features: [
@@ -627,7 +625,7 @@ const blockCategories = {
 		title: 'AI Blocks',
 		description:
 			'Leverage artificial intelligence for market analysis and trading decisions',
-		icon: Bot,
+			icon: Bot,
 		color: 'from-emerald-500 to-teal-500',
 		blocks: [
 			{
@@ -662,7 +660,7 @@ const blockCategories = {
 				id: 'price-prediction',
 				name: 'Price Prediction AI',
 				icon: Eye,
-				description:
+			description:
 					'Predicts future price movements using machine learning algorithms',
 				useCases: ['Price forecasting', 'Strategy planning', 'Risk assessment'],
 				features: [
@@ -676,7 +674,7 @@ const blockCategories = {
 				id: 'risk-ai',
 				name: 'AI Risk Assessment',
 				icon: AlertTriangle,
-				description:
+			description:
 					'Assesses portfolio and market risk using AI-powered analytics',
 				useCases: [
 					'Risk management',
@@ -694,7 +692,7 @@ const blockCategories = {
 				id: 'pattern-recognition',
 				name: 'Pattern Recognition',
 				icon: Search,
-				description:
+			description:
 					'Identifies chart patterns and market structures using computer vision',
 				useCases: ['Technical analysis', 'Pattern trading', 'Market structure'],
 				features: [
@@ -717,7 +715,7 @@ const blockCategories = {
 				id: 'trade-alert',
 				name: 'Trade Alert',
 				icon: Bell,
-				description:
+			description:
 					'Sends real-time notifications about trading activities and opportunities',
 				useCases: [
 					'Trade notifications',
@@ -735,7 +733,7 @@ const blockCategories = {
 				id: 'price-notification',
 				name: 'Price Notification',
 				icon: BarChart,
-				description:
+			description:
 					'Alerts users when price targets or thresholds are reached',
 				useCases: [
 					'Price alerts',
@@ -753,7 +751,7 @@ const blockCategories = {
 				id: 'portfolio-update',
 				name: 'Portfolio Update',
 				icon: Monitor,
-				description:
+			description:
 					'Provides regular updates on portfolio performance and changes',
 				useCases: [
 					'Performance reporting',
@@ -780,7 +778,7 @@ const blockCategories = {
 				id: 'gas-alert',
 				name: 'Gas Price Alert',
 				icon: Zap,
-				description:
+			description:
 					'Notifies users about optimal gas prices for transaction execution',
 				useCases: ['Gas optimization', 'Transaction timing', 'Cost alerts'],
 				features: [
@@ -802,7 +800,7 @@ const stats = [
 ];
 
 export default function Home() {
-	return (
+  return (
 		<div className='min-h-screen bg-background'>
 			{/* Header */}
 			<header className='border-b sticky top-0 bg-background/95 backdrop-blur-sm z-50'>
@@ -871,8 +869,8 @@ export default function Home() {
 								</div>
 								<div className='text-sm text-muted-foreground'>
 									{stat.label}
-								</div>
-							</div>
+				</div>
+					</div>
 						))}
 					</div>
 				</div>
@@ -891,14 +889,14 @@ export default function Home() {
 
 					<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
 						<Card className='hover:shadow-lg transition-shadow'>
-							<CardHeader>
+								<CardHeader>
 								<CardTitle className='flex items-center gap-2'>
 									<BarChart className='w-6 h-6 text-primary' />
 									DeFi Yield Farming
-								</CardTitle>
-							</CardHeader>
-							<CardContent>
-								<p className='text-muted-foreground mb-4'>
+									</CardTitle>
+								</CardHeader>
+								<CardContent>
+									<p className='text-muted-foreground mb-4'>
 									Automatically compound rewards, switch between pools, and
 									maximize yield across multiple DeFi protocols.
 								</p>
@@ -917,11 +915,11 @@ export default function Home() {
 										</Badge>
 										<Badge variant='outline' className='text-xs'>
 											Gas efficiency
-										</Badge>
+											</Badge>
 									</div>
-								</div>
-							</CardContent>
-						</Card>
+									</div>
+								</CardContent>
+							</Card>
 
 						<Card className='hover:shadow-lg transition-shadow'>
 							<CardHeader>
@@ -951,8 +949,8 @@ export default function Home() {
 										<Badge variant='outline' className='text-xs'>
 											Auto-execution
 										</Badge>
-									</div>
-								</div>
+					</div>
+				</div>
 							</CardContent>
 						</Card>
 
@@ -984,8 +982,8 @@ export default function Home() {
 										<Badge variant='outline' className='text-xs'>
 											Portfolio balance
 										</Badge>
-									</div>
-								</div>
+					</div>
+							</div>
 							</CardContent>
 						</Card>
 
@@ -1017,8 +1015,8 @@ export default function Home() {
 										<Badge variant='outline' className='text-xs'>
 											Auto-trading
 										</Badge>
-									</div>
-								</div>
+						</div>
+							</div>
 							</CardContent>
 						</Card>
 
@@ -1050,8 +1048,8 @@ export default function Home() {
 										<Badge variant='outline' className='text-xs'>
 											Multi-chain
 										</Badge>
-									</div>
-								</div>
+						</div>
+							</div>
 							</CardContent>
 						</Card>
 
@@ -1084,7 +1082,7 @@ export default function Home() {
 											Multi-wallet
 										</Badge>
 									</div>
-								</div>
+						</div>
 							</CardContent>
 						</Card>
 					</div>
@@ -1134,8 +1132,8 @@ export default function Home() {
 											<h3 className='text-3xl font-bold'>{category.title}</h3>
 											<p className='text-lg text-muted-foreground'>
 												{category.description}
-											</p>
-										</div>
+							</p>
+						</div>
 									</div>
 								</div>
 
@@ -1150,7 +1148,7 @@ export default function Home() {
 													<span className='text-sm font-medium truncate'>
 														{block.name}
 													</span>
-												</div>
+						</div>
 												<Badge variant='secondary' className='text-xs w-fit'>
 													{categoryKey}
 												</Badge>
@@ -1175,8 +1173,8 @@ export default function Home() {
 																	{useCase}
 																</Badge>
 															))}
-													</div>
-												</div>
+						</div>
+					</div>
 
 												<div className='bg-muted/50 rounded p-2'>
 													<p className='text-xs font-medium mb-1'>Example:</p>
@@ -1227,14 +1225,14 @@ export default function Home() {
 			<footer className='border-t py-12 px-4 bg-muted/50'>
 				<div className='container mx-auto text-center'>
 					<div className='flex items-center justify-center gap-2 mb-4'>
-						<Zap className='w-6 h-6 text-primary' />
+							<Zap className='w-6 h-6 text-primary' />
 						<span className='text-xl font-bold'>TaskWeave</span>
 					</div>
 					<p className='text-sm text-muted-foreground'>
 						Blockchain Automation Platform • Built with NODIT MCP
-					</p>
-				</div>
-			</footer>
-		</div>
-	);
+						</p>
+        </div>
+      </footer>
+    </div>
+  );
 }

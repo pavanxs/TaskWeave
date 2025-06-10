@@ -158,6 +158,10 @@ pnpm dev
 
 ### Example Workflows
 
+Here is an example of a workflow built using TaskWeave:
+
+![TaskWeave Workflow Example](public/image.png)
+
 **Simple Price Alert:**
 
 ```
@@ -236,7 +240,5 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 3. Commit changes (`git commit -m 'Add amazing feature'`)
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-
 
 **⚠️ Disclaimer:** This software is for educational and development purposes. Always test on testnets first and use at your own risk. Cryptocurrency trading and DeFi protocols involve significant financial risk.
