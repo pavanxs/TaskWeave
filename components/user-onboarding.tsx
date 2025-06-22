@@ -183,7 +183,7 @@ export function UserOnboarding() {
 	return (
 		<div className='max-w-4xl mx-auto p-6 space-y-6'>
 			<div className='text-center space-y-2'>
-				<h1 className='text-3xl font-bold'>Welcome to NoditAuto!</h1>
+				<h1 className='text-3xl font-bold'>Welcome to Taskweave!</h1>
 				<p className='text-muted-foreground'>
 					Let&apos;s get you set up with blockchain workflow automation
 				</p>

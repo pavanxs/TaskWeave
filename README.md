@@ -1,6 +1,6 @@
-# NoditAuto - Blockchain Automation Platform
+# Taskweave - Blockchain Automation Platform
 
-NoditAuto is a powerful visual blockchain automation platform that enables users to build sophisticated crypto trading and DeFi workflows using drag-and-drop blocks. Built with NODIT MCP integrations, it provides an intuitive interface for automating complex blockchain operations without writing code.
+Taskweave is a powerful visual blockchain automation platform that enables users to build sophisticated crypto trading and DeFi workflows using drag-and-drop blocks. Built with NODIT MCP integrations, it provides an intuitive interface for automating complex blockchain operations without writing code.
 
 ### Example Workflows
 
@@ -123,11 +123,6 @@ Here is an example of a workflow built using TaskWeave:
 
 1. **Clone the repository**
 
-```bash
-git clone https://github.com/yourusername/noditauto.git
-cd noditauto
-```
-
 2. **Install dependencies**
 
 ```bash
@@ -206,7 +201,7 @@ Connect your wallets through the configuration panel:
 ### Project Structure
 
 ```
-noditauto/
+taskweave/
 ├── app/                    # Next.js app router
 │   ├── (mainapp)/
 │   │   └── project/        # Main workflow builder
